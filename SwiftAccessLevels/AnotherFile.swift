@@ -12,9 +12,10 @@ class AnotherClassInAnotherFile {
     
     init() {
         
-        //Step 8. Try to print aFilePrivateProperty Here
+        //Step 8. Try to print aFilePrivateProperty Here - Impossible
         
-        //Step 10. Try to print anInternalProperty Here
+        //Step 10. Try to print anInternalProperty Here - Possible
+        print(AClass().anInternalProperty)
         
     }
     

@@ -11,5 +11,12 @@ import Foundation
 let aClass = AClass()
 
 aClass.methodA()
+print("")
+aClass.methodB()
+print("")
 
+let anotherClass = AnotherClassInTheSameFile()
+print("")
 
+let anotherClass2 = AnotherClassInAnotherFile()
+print("")

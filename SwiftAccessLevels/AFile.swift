@@ -8,11 +8,12 @@
 
 import Foundation
 
+
 class AClass {
     
     //Global variables, also called class properties.
     private var aPrivateProperty = "private property"
-    
+
     fileprivate var aFilePrivateProperty = "fileprivate property"
     
     var anInternalProperty = "internal property"
@@ -24,18 +25,22 @@ class AClass {
         //Step 1. Try to print aLocalVariable Here - Possible
         //print("\(aLocalVariable) printed from methodA in AClass")
         
-        //Step 3. Try to print aPrivateProperty Here
+        //Step 3. Try to print aPrivateProperty Here - Possible
+        print(aPrivateProperty)
         
-        //Step 6. Try to print aFilePrivateProperty Here
+        //Step 6. Try to print aFilePrivateProperty Here - Possible
+        print(aFilePrivateProperty)
         
-        //Step 9. Try to print anInternalProperty Here
+        //Step 9. Try to print anInternalProperty Here - Possible
+        print(anInternalProperty)
     }
     
     func methodB () {
         
-        //Step 2. Try to print aLocalVariable Here
+        //Step 2. Try to print aLocalVariable Here - Impossible
         
-        //Step 4. Try to print aPrivateProperty Here
+        //Step 4. Try to print aPrivateProperty Here - Possible
+        print(aPrivateProperty)
     }
     
 }
@@ -44,9 +49,10 @@ class AnotherClassInTheSameFile {
     
     init() {
         
-        //Step 5. Try to print aPrivateProperty Here
+        //Step 5. Try to print aPrivateProperty Here - Impossible
         
-        //Step 7. Try to print aFilePrivateProperty Here
+        //Step 7. Try to print aFilePrivateProperty Here - Possible
+        print(AClass().aFilePrivateProperty)
         
     }
 }
